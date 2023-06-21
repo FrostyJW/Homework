@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Todo list Application!</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        .button {
+            border-radius: 10px;
+            background-color: #11dcd3;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            transform: translateX(50%);
+            transform: translateY(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img class="image" src="static/pics/background.jpg" alt="Image">
+        <form action="{{ url_for('todopage') }}" method="GET">
+            <button class="button">Add Todo</button>
+        </form>
+    </div>
+</body>
+</html>

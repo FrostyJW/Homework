@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo Page!</title>
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 50px;
+            padding-right: 100px;
+            padding-left: 120px;
+            padding-top: 165px;
+            outline: none;
+
+        }
+        .descriptionlabel{
+            margin-bottom: 170px;
+            font-weight: bold;
+            font-family: "Arial Black";
+            justify-content: flex-start;
+        }
+
+        .image {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 60%;
+            max-height: 60%;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .addbutton {
+            background-color: #005bc5;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cancelbutton {
+            background-color: #7f8383;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="static/pics/rocket.jpg" alt="Image">
+        <form>
+            <label class="descriptionlabel">
+            <span class="labeltext">Description</span>
+            </label>
+            <textarea name="todo" rows="8" cols="150"></textarea>
+            <div class="button-container">
+                <button class="addbutton" formaction="{{url_for('todolist')}}">Add</button>
+                <button class="cancelbutton" formaction="{{url_for('homepage')}}">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
